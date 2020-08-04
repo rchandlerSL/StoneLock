@@ -6,7 +6,7 @@ import datetime
 class crmLead(models.Model):
     _inherit = 'crm.lead'
 
-    days_spent = fields.Integer(compute='_compute_difference',string="Opportunity Age")
+    days_spent = fields.Integer(compute='_compute_difference',string="Opportunity Age", store=True)
 
     def _compute_difference(self):
         for rec in self:
