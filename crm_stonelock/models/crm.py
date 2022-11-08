@@ -10,7 +10,7 @@ class crmLead(models.Model):
 
     def _compute_difference(self):
         for rec in self:
-            date_spent = (datetime.datetime.today()- rec.date_last_stage_update)
+            date_spent = (datetime.datetime.today() - rec.date_last_stage_update)
             rec.days_spent = date_spent.days
             if rec.days_spent > 0 and (date_spent.seconds/3600) % 24 >= 1:
                 rec.days_spent += 1
