@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo.upgrade import util
+from odoo.addons.base.maintenance.migrations import util
 
 
 def migrate(cr, version):
